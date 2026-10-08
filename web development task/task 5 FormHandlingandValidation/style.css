@@ -1,0 +1,126 @@
+
+/* General settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #263247;
+}
+
+/* Form container */
+.container {
+    background: white;
+    width: 100%;
+    max-width: 480px;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 8px;
+    color: #2457a7;
+}
+
+.subtitle {
+    text-align: center;
+    color: #667085;
+    margin-bottom: 25px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+/* Input fields */
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #8ab4f8;
+    border-color: #2457a7;
+}
+
+/* Validation errors */
+.error {
+    display: block;
+    color: #d93025;
+    font-size: 13px;
+    margin-bottom: 12px;
+    min-height: 0;
+}
+
+.error:empty {
+    display: none;
+}
+
+/* Invalid field appearance */
+input.invalid,
+textarea.invalid {
+    border-color: #d93025;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+    background: #2457a7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #174580;
+}
+
+/* Success message */
+#successMessage {
+    color: #16803c;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Mobile responsive design */
+@media (max-width: 480px) {
+    .container {
+        padding: 22px 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
+

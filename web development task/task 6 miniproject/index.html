@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEasy - Mini E-Commerce</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                ShopEasy
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#products">Products</a>
+                </li>
+
+                <li>
+                    <a href="#offers">Offers</a>
+                </li>
+
+                <li>
+                    <a href="#faq">FAQ</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         HERO SECTION
+         ========================================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                WELCOME TO SHOPEASY
+            </p>
+
+            <h1>
+                Shop Smart.
+                <br>
+                Shop Easy.
+            </h1>
+
+            <p>
+                Discover quality products at affordable prices.
+                Simple shopping, great products and amazing offers.
+            </p>
+
+            <a href="#products" class="main-button">
+                Shop Now
+            </a>
+
+        </div>
+
+        <div class="hero-box">
+            🛍️
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PRODUCTS SECTION
+         ========================================= -->
+
+    <section id="products" class="section">
+
+        <h2>Popular Products</h2>
+
+        <p class="section-text">
+            Check out some of our popular products.
+        </p>
+
+
+        <div class="products">
+
+
+            <!-- Product 1 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    👟
+                </div>
+
+                <h3>Running Shoes</h3>
+
+                <p>
+                    Comfortable shoes for everyday use.
+                </p>
+
+                <h4>₹1,999</h4>
+
+                <button
+                    class="product-button"
+                    onclick="openModal('Running Shoes', 'Comfortable running shoes for daily workouts.', '₹1,999')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+
+            <!-- Product 2 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🎧
+                </div>
+
+                <h3>Wireless Headphones</h3>
+
+                <p>
+                    Enjoy music without wires.
+                </p>
+
+                <h4>₹2,499</h4>
+
+                <button
+                    class="product-button"
+                    onclick="openModal('Wireless Headphones', 'High-quality wireless headphones with clear sound.', '₹2,499')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+
+            <!-- Product 3 -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🎒
+                </div>
+
+                <h3>Travel Backpack</h3>
+
+                <p>
+                    Stylish and spacious backpack.
+                </p>
+
+                <h4>₹1,299</h4>
+
+                <button
+                    class="product-button"
+                    onclick="openModal('Travel Backpack', 'A lightweight and spacious backpack for travel.', '₹1,299')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PRODUCT MODAL
+         ========================================= -->
+
+    <div id="productModal" class="modal">
+
+        <div class="modal-content">
+
+            <span
+                class="close"
+                onclick="closeModal()">
+                &times;
+            </span>
+
+            <h2 id="modalTitle">
+                Product Name
+            </h2>
+
+            <p id="modalDescription">
+                Product description.
+            </p>
+
+            <h3 id="modalPrice">
+                ₹0
+            </h3>
+
+            <button
+                class="main-button"
+                onclick="closeModal()">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         OFFERS SLIDER
+         ========================================= -->
+
+    <section id="offers" class="offers">
+
+        <h2>Special Offers</h2>
+
+
+        <div class="slider">
+
+            <div class="slide active">
+                <h3>20% OFF</h3>
+                <p>
+                    Get 20% discount on selected products.
+                </p>
+            </div>
+
+
+            <div class="slide">
+                <h3>Free Delivery</h3>
+                <p>
+                    Free delivery on orders above ₹999.
+                </p>
+            </div>
+
+
+            <div class="slide">
+                <h3>Weekend Sale</h3>
+                <p>
+                    Special weekend offers available now.
+                </p>
+            </div>
+
+
+            <div class="slider-buttons">
+
+                <button onclick="previousSlide()">
+                    ❮
+                </button>
+
+                <button onclick="nextSlide()">
+                    ❯
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FAQ SECTION
+         ========================================= -->
+
+    <section id="faq" class="section">
+
+        <h2>Frequently Asked Questions</h2>
+
+
+        <div class="faq">
+
+
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    onclick="toggleFAQ(0)">
+
+                    How can I place an order?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer" id="faqAnswer0">
+
+                    <p>
+                        Select a product and click the
+                        View Details button to see product
+                        information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    onclick="toggleFAQ(1)">
+
+                    Do you provide delivery?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer" id="faqAnswer1">
+
+                    <p>
+                        Yes. We provide delivery for
+                        eligible orders.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    onclick="toggleFAQ(2)">
+
+                    Do you offer discounts?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer" id="faqAnswer2">
+
+                    <p>
+                        Yes. Check our Special Offers
+                        section for current discounts.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CONTACT SECTION
+         ========================================= -->
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Email: support@shopeasy.com
+        </p>
+
+        <p>
+            Phone: +91 98765 43210
+        </p>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer>
+
+        <p>
+            © 2026 ShopEasy. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

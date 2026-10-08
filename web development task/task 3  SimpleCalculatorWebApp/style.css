@@ -1,0 +1,167 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    /* Center calculator on the screen */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #f2f2f2;
+}
+
+
+
+
+.calculator {
+    width: 350px;
+    padding: 20px;
+
+    background: #222;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+#display {
+    width: 100%;
+    height: 70px;
+
+    margin-bottom: 20px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    text-align: right;
+    font-size: 28px;
+
+    outline: none;
+}
+
+
+
+
+.buttons {
+    display: grid;
+
+    /* Four buttons in each row */
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+
+
+.buttons button {
+    height: 60px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #444;
+    color: white;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+
+
+.buttons button:hover {
+    background: #666;
+}
+
+
+
+
+.buttons button:active {
+    transform: scale(0.95);
+}
+
+
+
+
+.buttons button:nth-child(3),
+.buttons button:nth-child(4),
+.buttons button:nth-child(8),
+.buttons button:nth-child(12) {
+    background: #ff9500;
+}
+
+
+
+
+.buttons button:nth-child(3):hover,
+.buttons button:nth-child(4):hover,
+.buttons button:nth-child(8):hover,
+.buttons button:nth-child(12):hover {
+    background: #e68600;
+}
+
+
+
+
+.buttons button:first-child {
+    background: #d9534f;
+}
+
+.buttons button:first-child:hover {
+    background: #c9302c;
+}
+
+
+
+
+.buttons button:nth-child(16) {
+    background: #28a745;
+}
+
+.buttons button:nth-child(16):hover {
+    background: #218838;
+}
+
+
+
+
+@media (max-width: 400px) {
+
+    .calculator {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #display {
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .buttons {
+        gap: 7px;
+    }
+
+    .buttons button {
+        height: 55px;
+        font-size: 18px;
+    }
+}
