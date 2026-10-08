@@ -73,7 +73,5 @@ Task6_MiniProject/
 ├── script.js
 └── README.md
 
-## Author
-
-Your Name
+## GitHub Repository
 https://github.com/sans-76/Web-Development-Internship
